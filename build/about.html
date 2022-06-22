@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BITTE - Bangladesh International Travel & Tourism Expo</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- build:css assets/css/vendor-style-combined-all.min.css -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/vendor-style-all.css"> -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid p-0">
+
+            <!-- Responsive Menu -->
+            <div class="mobile-header-top">
+                <div class="responsive-menu">
+
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <div class="toggle-icon">
+                        <button id="toggleBarId" class="toggle-bar" onclick="menuOpen()" style="display: block;">
+                            <img src="assets/icons/toggle.svg" alt="Toggle Logo">
+                        </button>
+                        <button id="toggleCrossId" class="toggle-cross" onclick="menuClose()" style="display: none;">
+                            <img src="assets/icons/cross.svg" alt="Cross Logo">
+                        </button>
+                    </div>
+                </div>
+
+                <div id="mobileMenu" class="mobile-menu" style="display: none;">
+                    <ul>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="coming-soon.html">BITTE</a>
+                        </li>
+                        <li>
+                            <a href="#">Visit</a>
+                        </li>
+                        <li>
+                            <a href="#">Exhibit</a>
+                        </li>
+                        <li>
+                            <a href="#">PR & Media</a>
+                        </li>
+                        <li>
+                            <a href="#">Promotion</a>
+                        </li>
+                        <li>
+                            <a href="#">Partner</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <div class="mobile-register-btn">
+                        <a href="#" class="bt-btn h-34 w-100">Registration</a>
+                    </div>
+                </div>
+            </div><!-- Responsive Menu End -->
+
+            <div class="custom-container">
+                <div class="header-top-werapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img class="top-banner" src="assets/images/top-banner.png" alt="Banner">
+                        </a>
+                    </div>
+                    <div class="top-right-wrapper">
+                        <div class="d-flex flex-column">
+                            <a class="bt-btn h-34 c-mr-6 c-mb-6" href="#">Registration</a>
+                            <a class="bt-btn h-34 c-mr-6" href="#">Sign up</a>
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <div class="social-icon c-mb-6">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <img src="assets/icons/fb.svg" alt="Facebook">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <img src="assets/icons/in.svg" alt="Instagram">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <img src="assets/icons/tw.svg" alt="Twiiter">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <img src="assets/icons/link.svg" alt="Linkedin">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a class="bt-btn h-34" href="#">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- custom-container end -->
+
+            <div class="header-banner" style="background-image: url('assets/images/about-banner.jpg');">
+                <div class="custom-container">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="about.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="coming-soon.html">BITTE</a>
+                            </li>
+                            <li>
+                                <a href="#">Visit</a>
+                            </li>
+                            <li>
+                                <a href="#">Exhibit</a>
+                            </li>
+                            <li>
+                                <a href="#">PR & Media</a>
+                            </li>
+                            <li>
+                                <a href="#">Promotion</a>
+                            </li>
+                            <li>
+                                <a href="#">Partner</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="banner-content small">
+                        <div class="banner-text">
+                            <h2 class="my-breadcrumb">About</h2>
+                        </div>
+                    </div>
+                </div><!-- custom-container end -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Tourism History -->
+        <div class="feature-body">
+            <div class="custom-container">
+                <div class="feature-wrapper container-padding-2 tourism-history">
+                    <div class="feature-left">
+                        <img src="assets/images/history.jpg" alt="Tourism History">
+                    </div>
+                    <div class="feature-right">
+                        <h2>History of bangladesh toursim board</h2>
+                        <p>While the world of travel is constantly changing, the hunger for escape and discovery does not. At
+                            WTM London, we believe there is limitless potential for your business, and we designed our show to
+                            make that potential a reality.
+                            <span>&nbsp;</span>
+                            Your future begins today, and the potential is breathtaking. At WTM London, we apply our experience
+                            as the world leader to bring travel professionals together from around the world to engage in
+                            powerful networking opportunities, learn expert insights from the world’s brightest minds and so
+                            much more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bangladesh civil aviation -->
+        <div class="feature-body">
+            <div class="custom-container">
+                <div class="feature-wrapper civil">
+                    <div class="feature-left">
+                        <img src="assets/images/civil.jpg" alt="Bitte Overview Image">
+                    </div>
+                    <div class="feature-right">
+                        <h2>Bangladesh civil aviation</h2>
+                        <p>
+                            While the world of travel is constantly changing, the hunger for escape and discovery does not. At
+                            WTM
+                            London, we believe there is limitless potential for your business, and we designed our show to make
+                            that
+                            potential a reality.
+                            <span>&nbsp;</span>
+                            Your future begins today, and the potential is breathtaking. At WTM London, we apply our experience
+                            as the
+                            world leader to bring travel professionals together from around the world to engage in powerful
+                            networking
+                            opportunities, learn expert insights from the world’s brightest minds and so much more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Atab Vision -->
+        <div class="feature-body">
+            <div class="custom-container">
+                <div class="feature-wrapper container-padding-2 atab">
+                    <div class="feature-left">
+                        <img src="assets/images/atab.jpg" alt="Bitte Overview Image">
+                    </div>
+                    <div class="feature-right">
+                        <h2>Atab Vision</h2>
+                        <p>
+                            While the world of travel is constantly changing, the hunger for escape and discovery does not. At
+                            WTM
+                            London, we believe there is limitless potential for your business, and we designed our show to make
+                            that
+                            potential a reality.
+                            <span>&nbsp;</span>
+                            Your future begins today, and the potential is breathtaking. At WTM London, we apply our experience
+                            as the
+                            world leader to bring travel professionals together from around the world to engage in powerful
+                            networking
+                            opportunities, learn expert insights from the world’s brightest minds and so much more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="custom-container">
+                <div class="footer-content">
+                    <div class="about item">
+                        <div>
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="BITTE Logo">
+                            </a>
+                        </div>
+                        <p>
+                            World's most influential media, entertainment & technology show inspirational speakers including
+                            game
+                            changing not just a large-scale.
+                        </p>
+                    </div>
+
+                    <div class="contact-us item">
+                        <div class="title">Contact Us</div>
+                        <ul>
+                            <li>
+                                <div class="label">Address</div>
+                                <span>Agargaon, Sher-E-Bangla Nagar Dhaka</span>
+                            </li>
+                            <li>
+                                <div class="label">Email</div>
+                                <span><a href="mailto:Contact@bitte.com">Contact@bitte.com</a></span>
+                            </li>
+                            <li>
+                                <div class="label">Phone</div>
+                                <span><a href="tel:+8801785087148">+8801785087148</a></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="quick item">
+                        <div class="title">Quick</div>
+                        <ul>
+                            <li>
+                                <a href="about.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="coming-soon.html">BITTE</a>
+                            </li>
+                            <li>
+                                <a href="#">Visit</a>
+                            </li>
+                            <li>
+                                <a href="#">Exhibit</a>
+                            </li>
+                            <li>
+                                <a href="#">PR & Media</a>
+                            </li>
+                            <li>
+                                <a href="#">Promotion</a>
+                            </li>
+                            <li>
+                                <a href="#">Partner</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-social item">
+                        <div class="title">Social Media</div>
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Twitter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="all-rights">
+                    <span>@ 2022 BITTE. All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- build:js assets/js/vendor-js-combined-all.min.js -->
+    <!-- endbuild -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/custom-script.js"></script>
+</body>
+
+</html>

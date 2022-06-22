@@ -1,0 +1,23 @@
+.custom-container {
+  max-width: 111rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-padding {
+  padding: 10.12rem 0px;
+
+  @media screen and(max-width: 768px) {
+    flex-direction: column;
+    padding: 5rem 0rem;
+  }
+}
+
+.container-padding-2 {
+  padding: 9.5rem 0px;
+
+  @media screen and(max-width: 768px) {
+    flex-direction: column;
+    padding: 5rem 0rem;
+  }
+}
