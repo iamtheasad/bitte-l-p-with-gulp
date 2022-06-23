@@ -35,46 +35,45 @@
 
             <div class="quick item">
                <div class="title">Quick</div>
+
+               {%
+               set quick = {
+               "About us": "about.html",
+               "BITTE": "coming-soon.html",
+               "Visit": "#",
+               "Exhibit": "#",
+               "PR & Media": "#",
+               "Promotion": "#",
+               "Partner": "#"
+               }
+               %}
+
                <ul>
+                  {% for name, link in quick %}
                   <li>
-                     <a href="about.html">About us</a>
+                     <a href="{{link}}" target="_blank">{{name}}</a>
                   </li>
-                  <li>
-                     <a href="coming-soon.html">BITTE</a>
-                  </li>
-                  <li>
-                     <a href="#">Visit</a>
-                  </li>
-                  <li>
-                     <a href="#">Exhibit</a>
-                  </li>
-                  <li>
-                     <a href="#">PR & Media</a>
-                  </li>
-                  <li>
-                     <a href="#">Promotion</a>
-                  </li>
-                  <li>
-                     <a href="#">Partner</a>
-                  </li>
+                  {% endfor %}
                </ul>
             </div>
 
             <div class="footer-social item">
                <div class="title">Social Media</div>
+               {%
+               set social = {
+               "Facebook": "https://facebook.com/iamtheasad",
+               "Instagram": "https://instagram.com/aasaadrana",
+               "LinkedIn": "https://linkedin.com/in/iamtheasad",
+               "Twitter": "https://twitter.com/iamtheasad"
+               }
+               %}
+
                <ul>
+                  {% for itemName, socialLinks in social %}
                   <li>
-                     <a href="#" target="_blank">Facebook</a>
+                     <a href="{{socialLinks}}" target="_blank">{{itemName}}</a>
                   </li>
-                  <li>
-                     <a href="#" target="_blank">Instagram</a>
-                  </li>
-                  <li>
-                     <a href="#" target="_blank">LinkedIn</a>
-                  </li>
-                  <li>
-                     <a href="#" target="_blank">Twitter</a>
-                  </li>
+                  {% endfor %}
                </ul>
             </div>
          </div>
