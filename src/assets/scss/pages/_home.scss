@@ -46,7 +46,7 @@
       }
     }
 
-    &.civil {
+    &.row-reverse {
       flex-direction: row-reverse;
 
       @media screen and(max-width: 768px) {
@@ -75,6 +75,11 @@
         margin-bottom: 3rem;
         width: 100%;
       }
+    }
+
+    .feature-image {
+      height: 566px;
+      object-fit: contain;
     }
 
     .feature-right {
@@ -125,6 +130,11 @@
 
     .card-item {
       background-color: var(--color-white);
+      width: 33.3%;
+
+      @media screen and(max-width: 768px) {
+        width: 100%;
+      }
 
       .card-img {
         object-fit: contain;
