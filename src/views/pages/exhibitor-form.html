@@ -1,0 +1,311 @@
+{% set tabTitle = "Bitte | Exhibitor Form" %}
+
+{% extends "layouts/authLayout.njk" %}
+
+{% block content %}
+
+{% include 'layouts/header-2.njk' %}
+
+{% include "components/registration-popup.html" %}
+
+<main>
+   <div class="gray-bg">
+      <div class="custom-container">
+         <div class="container-padding-2">
+            <div class="row">
+               <div class="col-lg-4">
+                  <h2 class="header-title">Stand enquiry</h2>
+                  <p class="paragraph"> If you are interested in exhibiting at BITTM Dhaka 2023, complete and submit
+                     the
+                     following stand enquiry form. The BITTM team will contact you to discuss the options available.
+                  </p>
+               </div>
+
+               <div class="col-lg-7 offset-lg-1">
+                  <form action="/" id="exhibitorForm" class="form exhibitor-form exhibitorForm">
+                     <h3 class="sub-header-title">Exhibitor form</h3>
+
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="select" class="bt-label">Country you are based in <span>*</span></label>
+                              <select name="select" id="select" class="bt-input bt-select select">
+                                 <option value="">Please Select</option>
+                                 <option value="Bangladesh">Bangladesh</option>
+                                 <option value="USA">USA</option>
+                                 <option value="Canada">Canada</option>
+                                 <option value="Australia">Australia</option>
+                                 <option value="India">India</option>
+                              </select>
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="companyName" class="bt-label">Company Name/ Organization
+                                 <span>*</span></label>
+                              <input type="text" id="companyName" class="bt-input companyName" name="companyName">
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="selectTitle" class="bt-label">Select Title <span>*</span></label>
+                              <select name="selectTitle" id="selectTitle" class="bt-input bt-select selectTitle">
+                                 <option value="Mr">Mr.</option>
+                                 <option value="Mrs">Mrs.</option>
+                                 <option value="Mst">Mst.</option>
+                                 <option value="Md">Md.</option>
+                                 <option value="Other">Other</option>
+                              </select>
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="jobTitle" class="bt-label">Job Title <span>*</span></label>
+                              <input type="text" id="jobTitle" class="bt-input jobTitle" name="jobTitle">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="firstName" class="bt-label">First Name
+                                 <span>*</span></label>
+                              <input type="text" id="firstName" class="bt-input firstName" name="firstName">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="lastName" class="bt-label">Last Name <span>*</span></label>
+                              <input type="text" id="lastName" class="bt-input lastName" name="lastName">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="address" class="bt-label">Address <span>*</span></label>
+                              <textarea id="address" class="bt-input textarea address" name="address"></textarea>
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="telNumber" class="bt-label">Telephone</label>
+                              <input type="tel" id="telNumber" class="bt-input telNumber" name="telNumber">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="mobNumber" class="bt-label">Mobile <span>*</span></label>
+                              <input type="tel" id="mobNumber" class="bt-input mobNumber" name="mobNumber">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="email" class="bt-label">Email
+                                 <span>*</span></label>
+                              <input type="email" id="email" name="email" class="bt-input email" />
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="bt-form">
+                              <label for="websiteUrl" class="bt-label">Website <span>*</span></label>
+                              <input type="url" id="websiteUrl" class="bt-input websiteUrl" name="websiteUrl">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="bt-form mb-4">
+                              <label for="productActivities" class="bt-label">Please describe your Activities,
+                                 Services or Products to be Exhibited <span>*</span></label>
+                              <textarea id="productActivities" class="bt-input textarea productActivities"
+                                 name="productActivities"></textarea>
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div>
+                        <!-- <div class="col-md-7">
+                           <div class="bt-form">
+                              <label for="companyActivity" class="bt-label">What is your main company activity?
+                                 <span>*</span></label>
+                              <select name="companyActivity" id="companyActivity" class="bt-input bt-select">
+                                 <option value="Airline">Airline</option>
+                                 <option value="Airline">Airline</option>
+                                 <option value="Airline">Airline</option>
+                              </select>
+                           </div>
+                        </div> -->
+                        <!-- <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="taxNumber" class="bt-label">Company TAX number <span>*</span></label>
+                              <input type="text" id="taxNumber" class="bt-input" name="taxNumber">
+                              <div class="input-error">Error</div>
+                           </div>
+                        </div> -->
+                        <!-- <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="password" class="bt-label">Password
+                                 <span>*</span></label>
+                              <input type="password" id="password" class="bt-input" />
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="bt-form">
+                              <label for="password2" class="bt-label">Comfirm Password
+                                 <span>*</span></label>
+                              <input type="password" id="password2" class="bt-input" />
+                              <div class="input-error">Error message</div>
+                           </div>
+                        </div> -->
+                        <!-- <div class="col-md-12">
+                           <h4 class="sub-header-title-2">Choose your stand type *</h4>
+                           <div class="bt-form bt-radio">
+                              <input type="radio" class="bt-radio-input" name="standType" id="spaceOnly" checked>
+                              <label for="spaceOnly" class="bt-radio-label">
+                                 <span class="bt-radio-label__box">
+                                    <span class="bt-radio-label__box--inner">&nbsp;</span>
+                                 </span>
+                                 <span class="bt-radio-label--text ms-3">
+                                    Space only - Only the raw floor space is provided to the specified dimensions
+                                    booked.
+                                 </span>
+                              </label>
+                           </div>
+                           <div class="bt-form bt-radio">
+                              <input type="radio" class="bt-radio-input" name="standType" id="shellScheme">
+                              <label for="shellScheme" class="bt-radio-label">
+                                 <span class="bt-radio-label__box">
+                                    <span class="bt-radio-label__box--inner">&nbsp;</span>
+                                 </span>
+                                 <span class="bt-radio-label--text ms-3">
+                                    Shell Scheme - Includes standard rear and dividing walls, carpet, name board and
+                                    ceiling grid onto which spotlights may be fixed
+                                 </span>
+                              </label>
+                           </div>
+                        </div> -->
+
+                        <div class="col-md-12">
+                           <p class="sub-header-title-3">Exhibtion Space & Cost(Please see the floor plan enclosed)
+                           </p>
+                           <table class="table">
+                              <tr>
+                                 <th>Available space</th>
+                                 <th>Measurements</th>
+                                 <th>Cost in USD <span>(Milky way)</span>
+                                 </th>
+                                 <th>Cost in USD <span>(Harmony / Carnival)
+                                       Air Conditioned Hall</span>
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <div class="bt-form bt-checkbox">
+                                       <input type="checkbox" class="bt-checkbox-input" name="standType"
+                                          id="shellScheme" checked>
+                                       <label for="shellScheme" class="bt-checkbox-label">
+                                          <span class="bt-checkbox-label__box">
+                                             <span class="bt-checkbox-label__box--inner">&nbsp;</span>
+                                          </span>
+                                          <span class="bt-checkbox-label--text ms-3">
+                                             Pavilion
+                                          </span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>256 sft.</td>
+                                 <td>5000 $</td>
+                                 <td>8000 $</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <div class="bt-form bt-checkbox">
+                                       <input type="checkbox" class="bt-checkbox-input" name="standType" id="stall">
+                                       <label for="stall" class="bt-checkbox-label">
+                                          <span class="bt-checkbox-label__box">
+                                             <span class="bt-checkbox-label__box--inner"
+                                                style="background-image: url(./assets/images/icons/checkbox.svg);">&nbsp;</span>
+                                          </span>
+                                          <span class="bt-checkbox-label--text ms-3">
+                                             Stall
+                                          </span>
+                                       </label>
+                                    </div>
+                                 </td>
+                                 <td>64 sft</td>
+                                 <td>1200 $</td>
+                                 <td>1600 $</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="4" class="table-total">
+                                    <span class="table-total--text">Total cost:</span>
+                                    <span class="table-total--amount">$13000</span>
+                                 </td>
+                              </tr>
+                           </table>
+                        </div>
+
+                        <div class="col-md-12">
+                           <p class="sub-header-title-3">All Payments to be made in favour of Association of Travel
+                              Agents of Bangladesh</p>
+
+                           <div class="table-payment-info-wrapper">
+                              <table class="table-payment-info">
+                                 <tr>
+                                    <td>Name of the Account</td>
+                                    <td>:</td>
+                                    <td>Association of Travel Agents of Bangladesh</td>
+                                 </tr>
+                                 <tr>
+                                    <td> Name of the Bank</td>
+                                    <td>:</td>
+                                    <td>Trust Bank Limited, Kakrail Branch</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Account</td>
+                                    <td>:</td>
+                                    <td>0089-0320000141</td>
+                                 </tr>
+                                 <tr>
+                                    <td> Swift Code</td>
+                                    <td>:</td>
+                                    <td>TTBLBDDDHXXX</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Routing Number</td>
+                                    <td>:</td>
+                                    <td>240273376</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+
+                        <div class="col-md-12">
+                           <p class="small-text">
+                              We hereby agree to abide by the RULES & REGULATIONS of BITTE -2022. Should we be found
+                              to have violated the Terms, Condition, Rules and Regulation of BITTE -2022.Organized By
+                              Association of Travel Agents of Bangladesh –ATAB Resurve the right to cancel our
+                              participation without any refund and/or conduct disciplinary action as per rules &
+                              regulation of BITTE.
+                           </p>
+                        </div>
+                     </div>
+
+                     <button class="bt-btn btn-primary p-12x32 mt-24">Submit</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+
+
+{% include 'layouts/footer.njk' %}
+
+{% endblock %}

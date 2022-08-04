@@ -1,0 +1,72 @@
+.registration-select {
+  position: absolute;
+  top: 14.7rem;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: none;
+
+  @include mediaQueries(large) {
+    height: auto;
+    top: 0rem;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .cards-body {
+    .cards {
+      .card-item {
+        .card-text {
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cross-button {
+  border: none;
+  padding: 1.45rem;
+  background: var(--ra-color-white);
+  border-radius: 50%;
+  display: flex;
+  transition: 0.2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover img {
+    opacity: 1;
+  }
+
+  img {
+    width: 1.9rem;
+    height: 1.9rem;
+    opacity: 0.7;
+  }
+}
+
+.parargraph {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.registration-subtitle {
+  width: 50%;
+
+  @include mediaQueries(large) {
+    width: 100%;
+  }
+}
+
+.scroll-hide-show {
+  overflow: hidden;
+
+  @include mediaQueries(large) {
+    overflow: scroll;
+  }
+}

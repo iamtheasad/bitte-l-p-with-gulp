@@ -1,25 +1,37 @@
-// Core variables, Typography and mixins
-@import "bases/variables";
-@import "bases/normalize";
-@import "bases/mixins";
-@import "bases/functions";
-@import "bases/typography";
-@import "bases/animation";
+// Abstract SCSS
+@import 'abstracts/ra-root';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
 
-// Layouts
-@import "layouts/container";
-@import "layouts/topbar";
-@import "layouts/header";
-@import "layouts/spacing";
-@import "layouts/common";
-@import "layouts/colors";
-@import "layouts/grid";
-@import "layouts/preload";
-@import "layouts/buttons";
-@import "layouts/form";
-@import "layouts/footer";
-@import "layouts/coming-soon";
+// Base SCSS
+@import 'base/normalize';
+@import 'base/animation';
+@import 'base/button';
+@import 'base/colors';
+@import 'base/common';
+@import 'base/spacing';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'base/form';
 
-// Pages
-@import "pages/home";
-@import "pages/about";
+// Component SCSS
+@import 'components/coming-soon';
+@import 'components/scrollbar';
+
+// Layouts SCSS
+@import 'layouts/container';
+@import 'layouts/footer';
+@import 'layouts/grid';
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/preload';
+@import 'layouts/sidemenu';
+@import 'layouts/topbar';
+
+// Page SCSS
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/coming-soon';
+@import 'pages/home';
+@import 'pages/registration';

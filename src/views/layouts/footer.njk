@@ -2,79 +2,56 @@
    <div class="footer">
       <div class="custom-container">
          <div class="footer-content">
-            <div class="about item">
-               <div>
-                  <a href="index.html">
-                     <img src="assets/images/logo.png" alt="BITTE Logo">
-                  </a>
+            <div class="row g-5">
+               <div class="col-md-3">
+                  <div class="about item">
+                     <div class="logo">
+                        <a href="/">
+                           <img src="assets/images/logo_new.png" alt="BITTE Logo">
+                        </a>
+                     </div>
+                  </div>
                </div>
-               <p>
-                  World's most influential media, entertainment & technology show inspirational speakers including game
-                  changing not just a large-scale.
-               </p>
-            </div>
+               <div class="col-md-7">
+                  <div class="contact-us item">
+                     <div class="title">Contact Us</div>
+                     <ul>
+                        <li>
+                           <div class="label">Address</div>
+                           <span>Sattara Center (15th Floor), 30/A Naya Paltan, VIP Road, Dhaka-1000, Bangladesh.</span>
+                        </li>
+                        <li>
+                           <div class="label">Email</div>
+                           <span><a href="mailto:bitte@atab.org.bd">bitte@atab.org.bd</a></span>
+                        </li>
+                        <li>
+                           <div class="label">Phone</div>
+                           <span><a href="tel:+8801785087148">+8801785087148</a></span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div class="footer-social item">
+                     <div class="title">Social Media</div>
+                     {%
+                     set social = {
+                     "Facebook":
+                     "https://www.facebook.com/Bangladesh-International-Travel-Tourism-Expo-BITTE-101073642648043/?ref=pages_you_manage",
+                     "Instagram": "https://www.instagram.com/bitte.atab/",
+                     "Twitter": "https://twitter.com/BangladeshExpo"
+                     }
+                     %}
 
-            <div class="contact-us item">
-               <div class="title">Contact Us</div>
-               <ul>
-                  <li>
-                     <div class="label">Address</div>
-                     <span>Sattara Center (15th Floor), 30/A Naya Paltan, VIP Road, Dhaka-1000, Bangladesh.</span>
-                  </li>
-                  <li>
-                     <div class="label">Email</div>
-                     <span><a href="mailto:bitte@atab.org.bd">bitte@atab.org.bd</a></span>
-                  </li>
-                  <li>
-                     <div class="label">Phone</div>
-                     <span><a href="tel:+8801785087148">+8801785087148</a></span>
-                  </li>
-               </ul>
-            </div>
-
-            <div class="quick item">
-               <div class="title">Quick</div>
-
-               {%
-               set quick = {
-               "About us": "about.html",
-               "BITTE": "coming-soon.html",
-               "Visit": "#",
-               "Exhibit": "#",
-               "PR & Media": "#",
-               "Promotion": "#",
-               "Partner": "#"
-               }
-               %}
-
-               <ul>
-                  {% for name, link in quick %}
-                  <li>
-                     <a href="{{link}}" target="_blank">{{name}}</a>
-                  </li>
-                  {% endfor %}
-               </ul>
-            </div>
-
-            <div class="footer-social item">
-               <div class="title">Social Media</div>
-               {%
-               set social = {
-               "Facebook":
-               "https://www.facebook.com/Bangladesh-International-Travel-Tourism-Expo-BITTE-101073642648043/?ref=pages_you_manage",
-               "Instagram": "https://www.instagram.com/bitte.atab/",
-               "LinkedIn": "#",
-               "Twitter": "#"
-               }
-               %}
-
-               <ul>
-                  {% for itemName, socialLinks in social %}
-                  <li>
-                     <a href="{{socialLinks}}" target="_blank">{{itemName}}</a>
-                  </li>
-                  {% endfor %}
-               </ul>
+                     <ul>
+                        {% for itemName, socialLinks in social %}
+                        <li>
+                           <a href="{{socialLinks}}" target="_blank">{{itemName}}</a>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
 

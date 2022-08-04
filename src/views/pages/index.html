@@ -1,149 +1,734 @@
+{% set tabTitle = "Bitte | Home" %}
+
 {% extends "layouts/layout.njk" %}
 
 {% block content %}
 
 {% include 'layouts/header.njk' %}
 
+{% include "components/registration-popup.html" %}
+
 <main>
+
+   <!-- Modal Video -->
+   <div id="myModal" class="modal fade custom-modal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-center modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header border-0">
+               <h5 class="modal-title" id="exampleModalLabel">&nbsp;</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <div class="video">
+                  <!-- <video loop autoplay controls muted>
+                     <source src="./assets/video.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video> -->
+                  <iframe width="800" height="500" src="https://www.youtube.com/embed/HeMIZC2rkMo"
+                     title="YouTube video player" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
    <!-- Tourism Board -->
    <div class="feature-body">
       <div class="custom-container">
-         <div class="feature-wrapper container-padding tourism-board">
-            <div class="feature-left">
-               <img class="feature-image" src="assets/images/tourism-board.jpg" alt="Tourism Board">
-            </div>
-            <div class="feature-right">
-               <h2>Future of Tourism Bangladesh</h2>
-               <p>Bangladesh is a land of natural beauty, incredible history, seashores, world heritage sites, diverse
-                  wildlife etc. Despite being affected by COVID-19, Bangladesh is one of the countries that grasped the
-                  situation and opened tourism to everyone. According to WEF data, 97% of the tourists are locals, and
-                  there
-                  is still a lot of room for foreign tourists to visit Bangladesh.
-                  <span>&nbsp;</span>
-                  Bangladesh tourism was held back due to a lack of convenient transportation, scarcity of travel
-                  information, lacklustre marketing strategies etc. BITTE is working to expand the horizons of
-                  Bangladesh’s
-                  tourism by overcoming its shortcomings. BITTE aims to nurture collaboration between local and
-                  international tourism companies to forge a clear path for the industry. Its experience in the industry
-                  will be essential in overcoming challenges and hurdles. Bangladesh is set to become a trending
-                  destination
-                  for both international and domestic tourists.
-               </p>
+         <div class="feature-wrapper container-padding-2 tourism-board">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/tourism-board.jpg" alt="Tourism Board">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Future of Tourism Bangladesh</h2>
+                     <p>Bangladesh is a land of natural beauty, incredible history, seashores, world heritage sites,
+                        diverse
+                        wildlife etc. Despite being affected by COVID-19, Bangladesh is one of the countries that
+                        grasped the
+                        situation and opened tourism to everyone. According to WEF data, 97% of the tourists are locals,
+                        and
+                        there
+                        is still a lot of room for foreign tourists to visit Bangladesh.
+                        <span>&nbsp;</span>
+                        Bangladesh tourism was held back due to a lack of convenient transportation, scarcity of travel
+                        information, lacklustre marketing strategies etc. BITTE is working to expand the horizons of
+                        Bangladesh’s
+                        tourism by overcoming its shortcomings. BITTE aims to nurture collaboration between local and
+                        international tourism companies to forge a clear path for the industry. Its experience in the
+                        industry
+                        will be essential in overcoming challenges and hurdles. Bangladesh is set to become a trending
+                        destination
+                        for both international and domestic tourists.
+                     </p>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
    </div>
 
    <!-- Cards -->
-   <div class="cards-body container-padding">
+   <div class="cards-body container-padding-2 gray-bg">
       <div class="custom-container">
          <div class="cards">
-            <div class="card-item">
-               <div>
-                  <img class="card-img" src="assets/images/about-us.jpg" alt="About Image">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="card-item" id="aboutUs">
+                     <div>
+                        <img class="card-img" src="assets/images/about-us.jpg" alt="About Image">
+                     </div>
+                     <div class="card-text">
+                        <h3>About us</h3>
+                        <p>
+                           Bangladesh International Travel and Tourism Expo BITTE designed to connect professionals from
+                           all
+                           levels
+                           of business and service in Travel and Tourism, offering you the opportunity to exhibit
+                           in-person
+                           exhibition at The Expo covering, Airlines, inbound, outbound, cultural, Medical tourism,
+                           theme
+                           parks,
+                           lifestyle, local and International travel agencies and Tour Operators, Accommodation,
+                           Destination
+                           Management Companies-DMC , Tourist Transportation company, Cruise lines M.I.C.E. and so on
+                           it’s a
+                           opportunity to selling products and services directly to b2b and b2c consumers. Also It is a
+                           platform
+                           for industry stakeholders to meet and connect with travel trade partners from the market
+                           locally and
+                           internationally.
+                        </p>
+                        <div>
+                           <a href="#about-bitte" class="bt-btn h-48 btn-primary">Our Story</a>
+                        </div>
+                     </div>
+                  </div><!-- Card Item -->
                </div>
-               <div class="card-text">
-                  <h3>About us</h3>
-                  <p>Explore the story of BITTE and dive deeper into the process of discovering the scale, innovation
-                     and
-                     opportunities of Bangladesh and the international travel and tourism industry.</p>
-                  <div>
-                     <a href="#" class="bt-btn h-48 btn-primary">Our Story</a>
-                  </div>
+               <div class="col-md-4">
+                  <div id="visit" class="card-item">
+                     <div>
+                        <img class="card-img" src="assets/images/card-2.jpg" alt="About Image">
+                     </div>
+                     <div class="card-text">
+                        <h3>Visit</h3>
+                        <p>
+                           To meet and make business contacts with the leading Local and International travel and
+                           tourism
+                           service
+                           providers at a single venue
+                           To compare the quality of all specialized products and services directly from large number of
+                           exhibitors
+                           To discover and decide all the latest trends, business opportunities and detailed information
+                           about
+                           tourism industry
+                           To attend conference, seminars and parallel events about the future of the industry
+                           To observe the competitive services as well as environment
+                           To arrange B2B meetings with sector professionals to make new business and expand connections
+                           To experience true expo and upgrade your tourism knowledge based on market competitors.
+                        </p>
+                        <div>
+                           <a href="#visitorsBenefits" class="bt-btn h-48 btn-primary">Visit</a>
+                        </div>
+                     </div>
+                  </div><!-- Card Item -->
                </div>
-            </div><!-- Card Item -->
+               <div class="col-md-4">
+                  <div class="card-item">
+                     <div>
+                        <img class="card-img" src="assets/images/card-3.jpg" alt="About Image">
+                     </div>
+                     <div class="card-text">
+                        <h3>Exhibit</h3>
+                        <p>
+                           To develop your networking as well as face to face interaction with potential B2B and B2C
+                           clients To
+                           Generate Spot Sale to B2B and B2C Clients To prepare a platform for new cooperation
+                           agreements To
+                           launch
+                           new products and services To create B2B contacts with the hosted buyers from various
+                           countries To
+                           showcase new travel trends and destinations To create and strengthen brand awareness To
+                           exchange
+                           information between national and international travel industry experts To develop the
+                           customer
+                           satisfaction.
+                        <div>
+                           <a href="#exhibitBitte" class="bt-btn h-48 btn-primary">Exhibit with us</a>
+                        </div>
+                     </div>
+                  </div><!-- Card Item -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
-            <div class="card-item">
-               <div>
-                  <img class="card-img" src="assets/images/card-2.jpg" alt="About Image">
-               </div>
-               <div class="card-text">
-                  <h3>Visit</h3>
-                  <p>Discover the WTM London story and learn how we've been bringing innovation and opportunity to the
-                     world’s travel providers for decades.</p>
-                  <div>
-                     <a href="#" class="bt-btn h-48 btn-primary">Visit</a>
+   <!-- What is ATAB? -->
+   <div class="feature-body">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="object-fit-contain feature-image" src="assets/images/LogoATAB.jpg"
+                        alt=" What is ATAB Image">
                   </div>
                </div>
-            </div><!-- Card Item -->
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>What is ATAB?</h2>
+                     <p>
+                        The Association of Travel Agents of Bangladesh, or ATAB, is a well-organised and popular
+                        association
+                        in
+                        Bangladesh. This association has around 3500 members all over the country and plays a vital role
+                        in
+                        the
+                        smoother development of the Aviation & Tourism sector in Bangladesh.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
-            <div class="card-item">
-               <div>
-                  <img class="card-img" src="assets/images/card-3.jpg" alt="About Image">
-               </div>
-               <div class="card-text">
-                  <h3>Exhibit</h3>
-                  <p>Discover the WTM London story and learn how we've been bringing innovation and opportunity to the
-                     world’s travel providers for decades.</p>
-                  <div>
-                     <a href="#" class="bt-btn h-48 btn-primary">Exhibit with us</a>
+   <!-- About ATAB -->
+   <div class="feature-body gray-bg" id="about-bitte">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2 row-reverse">
+            <div class="row g-0 d-flex align-items-center flex-row-reverse">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/about-atab.jpg" alt="About ATAB Image">
                   </div>
                </div>
-            </div><!-- Card Item -->
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>About ATAB</h2>
+                     <p>
+                        Bangladesh International Travel and Tourism Expo BITTE designed to connect professionals from
+                        all
+                        levels
+                        of business and service in Travel and Tourism, offering you the opportunity to exhibit in-person
+                        exhibition at The Expo covering, Airlines, inbound, outbound, cultural, Medical tourism, theme
+                        parks,
+                        lifestyle, local and International travel agencies and Tour Operators, Accommodation,
+                        Destination
+                        Management Companies-DMC , Tourist Transportation company, Cruise lines M.I.C.E. and so on it’s
+                        a
+                        opportunity to selling products and services directly to b2b and b2c consumers. Also It is a
+                        platform
+                        for
+                        industry stakeholders to meet and connect with travel trade partners from the market locally and
+                        internationally.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Atab Vision -->
+   <div class="feature-body">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/atab-vision.jpg" alt="Atab Vision Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Atab Vision</h2>
+                     <p>
+                        Introducing tourism and aviation potentiality of Bangladesh Establishing the country as a
+                        tourist
+                        destination to the whole world.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Mission -->
+   <div class="feature-body gray-bg">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2 row-reverse">
+            <div class="row g-0 d-flex align-items-center flex-row-reverse">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/image-008.png" alt="Mission Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Mission</h2>
+                     <p>
+                        Promote responsible air travel & tourism trade.
+                        Ensure welfare of member travel agencies.
+                        Support to development of tourism industry
+                        Generate skill manpower for tourism and travel agencies.
+                     </p>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 
    <!-- BITTE over view -->
+   <div class="feature-body" id="bitte">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image object-fit-contain" src="assets/images/bitte-overview.jpeg"
+                        alt="Bitte Overview Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>BITTE Overview</h2>
+                     <p>
+                        Bangladesh is the fastest socio economically growing country and Government of Bangladesh has
+                        taken
+                        many
+                        initiatives to promote travel & tourism.
+                        One of the mandates of ATAB is to expand the horizon of business opportunities in travel trade
+                        to and
+                        from
+                        Bangladesh. With this view in focus, ATAB works in tandem with the Tourism Ministry/Bodies not
+                        only in
+                        Bangladesh but also with other organization across the world to further the development of
+                        relations
+                        so
+                        that there is a mutual benefit for both countries.
+                        With the above objectives in mind, ATAB has embarked upon holding a mega event BITTE (Bangladesh
+                        International Travel and Tourism Expo) to be held in December 2022.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- About BITTE -->
+   <div class="feature-body gray-bg">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2 row-reverse">
+            <div class="row g-0 d-flex align-items-center flex-row-reverse">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image object-fit-contain" src="assets/images/b1.jpeg" alt="About BITTE Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>About BITTE</h2>
+                     <p>
+                        Bangladesh International Travel and Tourism Expo (BITTE) has designed to connect all
+                        stakeholders
+                        related
+                        to Travel and Tourism, offering the opportunity to exhibit in-person exhibition at The Expo
+                        covering -
+                        Airlines, Inbound, Outbound, Domestic, Culture & Heritage, Medical, M.I.C.E Tourism, Theme
+                        Parks,
+                        lifestyle, local and International Travel agencies and Tour Operators, Accommodation, Hajj,
+                        Umrah,
+                        Destination Management Companies-DMC , Tourist Transportation company, Cruise lines and so on.
+                        It’s an
+                        opportunity to showcase & sell products and services on the spot directly to B2B and B2C
+                        consumers.
+                        Also
+                        It is a platform for industry stakeholders to meet and connect with local & international travel
+                        trade
+                        partners.
+                        <span>&nbsp;</span>
+                        ATAB, being the only association for the travel agencies always looking for the betterment of
+                        its members. It is also the largest & most active association working in the tourism sector in
+                        Bangladesh
+                        since 1976. The vibrant 3500 member travel agencies are the strength behind the success & pro
+                        activity
+                        of
+                        the association. However, present Executive Committee under the dynamic leadership of the
+                        President,
+                        Mr.
+                        S. N. Manzur Murshed (Mahbub) feels the urgency to arrange travel & tourism exhibition to
+                        connect the
+                        travel agents & tour operators around the world for better service to the clients.
+                        <span>&nbsp;</span>
+                        ATAB take this event as an important & prestigious project for the development of the trade to
+                        strengthen
+                        the local tourism as well as extend support to Government to promote tourism in Bangladesh.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Exhibitors From Different Sub Sector -->
+   <div class="feature-body" id="exhibit">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/image-011.png"
+                        alt="Exhibitors From Different Sub Sector Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Exhibitors From Different Sub Sector</h2>
+                     <ul>
+                        <li>National Tourism Organisations </li>
+                        <li>Government Tourism Organisations </li>
+                        <li>Law Enforcement Agencies </li>
+                        <li>Embassies and High Commissions </li>
+                        <li>Travel And Tourism Authorities</li>
+                        <li>Regional Tourism Organizations </li>
+                        <li>Airline Companies and GSA Agencies </li>
+                        <li>OTA's and GDS Companies </li>
+                        <li>IATA Travel Agencies </li>
+                        <li>Transportation Support Providers </li>
+                        <li>Hotels, Motels and Resorts </li>
+                        <li>Inbound Tour Operators </li>
+                        <li>Outbound Tour Operators </li>
+                        <li>Foreign Tour Operators </li>
+                        <li>Destination Marketing Organisations </li>
+                        <li>Health Service Providers </li>
+                        <li>MICE Promoters </li>
+                        <li>Event Management Companies </li>
+                        <li>Cruise lines</li>
+                        <li>Hajj- Omrah Agencies </li>
+                        <li>Bank and Financial Institutions </li>
+                        <li>Insurance Companies </li>
+                        <li>Real Estate Companies</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Exhibitors Benefits -->
+   <div class="feature-body gray-bg" id="exhibitBitte">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2 row-reverse">
+            <div class="row g-0 d-flex align-items-center flex-row-reverse">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/why.jpeg" alt="Exhibitors Benefits Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Why Exhibit? </h2>
+                     <p>
+                        To develop your networking as well as face to face interaction with potential B2B and B2C
+                        clients To
+                        Generate Spot Sale to B2B and B2C Clients To prepare a platform for new cooperation agreements
+                        To
+                        launch
+                        new products and services To create B2B contacts with the hosted buyers from various countries
+                        To
+                        showcase
+                        new travel trends and destinations To create and strengthen brand awareness To exchange
+                        information
+                        between national and international travel industry experts To develop the customer satisfaction
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Facilities for Foreign Exhibitors -->
    <div class="feature-body">
       <div class="custom-container">
-         <div class="feature-wrapper container-padding bitte-overview">
-            <div class="feature-left">
-               <img class="feature-image" src="assets/images/overview.jpg" alt="Bitte Overview Image">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/intercontinental-dhaka-5919572575-original.jpeg"
+                        alt="Facilities for Foreign Exhibitors Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Facilities for Foreign Exhibitors</h2>
+                     <ul>
+                        <li>Meet and Greet at Dhaka airport</li>
+                        <li>Airport-Hotel-Airport transfers</li>
+                        <li>Hotel-Venue-Hotel transfers</li>
+                        <li>Hotel-Accommodation</li>
+                        <li>2 Nights FAM-Trip (before or after the Expo)</li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-            <div class="feature-right">
-               <h2>BITTE Overview</h2>
-               <p>
-                  Bangladesh is the fastest socio economically growing country and Government of Bangladesh has taken
-                  many
-                  initiatives to promote travel & tourism.
-                  One of the mandates of ATAB is to expand the horizon of business opportunities in travel trade to and
-                  from
-                  Bangladesh. With this view in focus, ATAB works in tandem with the Tourism Ministry/Bodies not only in
-                  Bangladesh but also with other organization across the world to further the development of relations
-                  so
-                  that there is a mutual benefit for both countries.
-                  With the above objectives in mind, ATAB has embarked upon holding a mega event BITTE (Bangladesh
-                  International Travel and Tourism Expo) to be held in December 2022.
-               </p>
+         </div>
+      </div>
+   </div>
+
+   <!-- Visitors Benefits -->
+   <div class="feature-body gray-bg" id="visitorsBenefits">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2 row-reverse">
+            <div class="row g-0 d-flex align-items-center flex-row-reverse">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/visit.jpeg" alt="Visitors Benefits Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>Why Visit US?</h2>
+                     <p>To meet and make business contacts with the leading Local and International travel and tourism
+                        service
+                        providers at a single venue
+                        To compare the quality of all specialized products and services directly from large number of
+                        exhibitors
+                        To discover and decide all the latest trends, business opportunities and detailed information
+                        about
+                        tourism industry
+                        To attend conference, seminars and parallel events about the future of the industry
+                        To observe the competitive services as well as environment
+                        To arrange B2B meetings with sector professionals to make new business and expand connections
+                        To experience true expo and upgrade your tourism knowledge based on market competitors.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- What do you get out of attending the BITTE exposition? -->
+   <div class="feature-body">
+      <div class="custom-container">
+         <div class="feature-wrapper container-padding-2">
+            <div class="row g-0 d-flex align-items-center">
+               <div class="col-lg-6">
+                  <div class="feature-left">
+                     <img class="feature-image" src="assets/images/image-017.png"
+                        alt="What do you get out of attending the BITTE exposition Image">
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="feature-right">
+                     <h2>What do you get out of attending the BITTE exposition?</h2>
+                     <ul>
+                        <li>An effective target audience (B2B and B2C) to showcase your products and services.</li>
+                        <li>An environment of productive communication through face to face engagement
+                           with your potential buyers.</li>
+                        <li>Exposure of full spectrum of products and services for direct sales opportunities.</li>
+                        <li>Reach out to International /Regional and domestic travel industry suppliers and buyers.</li>
+                        <li>Meet travel industry specialists and stay updated on current travel industry trends and
+                           developments.
+                        </li>
+                        <li>Opportunity to build new business contacts.</li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
    </div>
 
    <!-- Our Partner -->
-   <div class="feature-body">
+   <div class="feature-body gray-bg" id="partners">
       <div class="custom-container">
-         <div class="feature-wrapper partner">
-            <div class="feature-left">
-               <div class="partner-icon-wrapper">
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
-                  <a href="#">
-                     <img class="partner-icon" src="assets/images/partner.png" alt="Partner Image">
-                  </a>
+         <div class="feature-wrapper partner container-padding-2">
+
+            <div class="row g-0 d-flex align-items-center flex-column-reverse">
+               <div class="col-lg-12">
+                  <div class="feature-left">
+                     <div class="partner-icon-wrapper">
+                        <a href="javascript:void(0)">
+                           <img class="partner-icon" src="assets/images/partner-1.png" alt="Partner Image">
+                        </a>
+                        <a href="javascript:void(0)">
+                           <img class="partner-icon" src="assets/images/partner-3.png" alt="Partner Image">
+                        </a>
+                        <a href="javascript:void(0)">
+                           <img class="partner-icon" src="assets/images/partner-4.png" alt="Partner Image">
+                        </a>
+                        <a href="javascript:void(0)">
+                           <img class="partner-icon" src="assets/images/partner-5.png" alt="Partner Image">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="feature-right text-center">
+                     <h2>Supported By</h2>
+                  </div>
                </div>
             </div>
-            <div class="feature-right">
-               <h2>Our Partners</h2>
-               <p>
-                  World's most influential media, entertainment & technology show inspirational speakers including game
-                  changing not just a large-scale.
-               </p>
+         </div>
+      </div>
+   </div>
+
+   <div class="feature-body " id="news">
+      <div class="custom-container">
+         <div class="feature-wrapper partner container-padding-2">
+
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="feature-right text-center">
+                     <h2>News & Media</h2>
+                  </div>
+               </div>
+               <div class="row g-0 d-flex align-items-center">
+                  <div class="col-lg-6">
+                     <div class="feature-left">
+                        <img class="feature-image" src="assets/images/atab101.jpg"
+                           alt="What do you get out of attending the BITTE exposition Image">
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="feature-right pl-md-60">
+                        <div class="news-wrapper scrollbar">
+                           <div class="news"><a target="_blank"
+                                 href="https://www.channelionline.com/%e0%a6%a1%e0%a6%bf%e0%a6%b8%e0%a7%87%e0%a6%ae%e0%a7%8d%e0%a6%ac%e0%a6%b0%e0%a7%87-%e0%a6%a2%e0%a6%be%e0%a6%95%e0%a6%be%e0%a7%9f-%e0%a6%86%e0%a6%9f%e0%a6%be%e0%a6%ac%e0%a7%87%e0%a6%b0-%e0%a6%86/"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">ডিসেম্বরে ঢাকায় আটাবের আন্তর্জাতিক পর্যটন মেলা</h5>
+                                    <p class="fz12 mb-3">দেশের পর্যটন খাতকে এগিয়ে নিতে এবছর ডিসেম্বর মাসে ঢাকায় অনুষ্ঠিত
+                                       হবে তিন
+                                       দিনের আন্তর্জাতিক পর্যটন মেলা। আগামী ১ থেকে ৩ ডিসেম্বর রাজধানীর বঙ্গবন্ধু
+                                       আন্তর্জাতিক
+                                       সম্মেলন কেন্দ্রে “বাংলাদেশ ইন্টারন্যাশনাল ট্রাভেল অ্যান্ড টুরিজম এক্সপো
+                                       (বিআইটিটিই-২০২২)”
+                                       আয়োজন করবে অ্যাসোসিয়েশন অব ট্রাভেল এজেন্টস অব বাংলাদেশ (আটাব)। আন্তর্জাতিক এই
+                                       পর্যটন মেলা
+                                       উপলক্ষে মঙ্গলবার আয়োজিত এক সংবাদ সম্মেলনে এ তথ্য জানান আটাব নেতারা...</p><span
+                                       class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank"
+                                 href="https://bangladeshmonitor.com.bd/news-details/The3dayInternationalTravelTourismExpostartsonDecember1"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">আন্তর্জাতিক ট্রাভেল-ট্যুরিজম এক্সপো শুরু ১ ডিসেম্বর</h5>
+                                    <p class="fz12 mb-3">আগামী ১ ডিসেম্বর শুরু হচ্ছে বাংলাদেশ ইন্টারন্যাশনাল ট্রাভেল
+                                       অ্যান্ড
+                                       ট্যুরিজম এক্সপো (বিআইটিটিই)। রাজধানীর বঙ্গবন্ধু আন্তর্জাতিক সম্মেলন কেন্দ্রে এই
+                                       এক্সপো শেষ
+                                       হবে ৩ ডিসেম্বর। এক্সপোটি আয়োজন করছে অ্যাসোসিয়েশন অব ট্রাভেল এজেন্টস অব বাংলাদেশ
+                                       (আটাব)...
+                                    </p>
+                                    <span class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank"
+                                 href="https://www.newsbangla24.com/lifestyle/198267/A-three-day-tourism-fair-to-showcase-the-country-to-the-world"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">দেশকে বিশ্বদরবারে তুলে ধরতে তিন দিনের পর্যটন মেলা</h5>
+                                    <p class="fz12 mb-3">বিদেশি মুদ্রা অর্জনে দেশের পর্যটন সেবার মান উন্নয়ন ও বিক্রির
+                                       বাজার
+                                       সৃষ্টি, সাংস্কৃতিক অনুষ্ঠান, ফ্যাম ট্যুর, পর্যটন শিল্পের প্রচার-প্রসার,
+                                       ঐতিহ্যবাহী খাদ্য
+                                       প্রদর্শন, বিভিন্ন দেশের অ্যাম্বাসি, হাইকমিশনগুলোর সাথে সু-সম্পর্ক স্থাপন, ট্রাভেল
+                                       এজেপি,
+                                       ট্যুর অপারেটর, এয়ারলাইন্সগুলোর মধ্যে দৃঢ় ব্যবসায়িক সম্পর্ক গড়ে তুলতে সহায়ক
+                                       হবে এই
+                                       মেলা...</p>
+                                    <span class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank"
+                                 href="https://m.dailyinqilab.com/article/499302/%E0%A6%A1%E0%A6%BF%E0%A6%B8%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A6%B0-%E0%A6%A2%E0%A6%BE%E0%A6%95%E0%A6%BE%E0%A7%9F-%E0%A6%A4%E0%A6%BF%E0%A6%A8-%E0%A6%A6%E0%A6%BF%E0%A6%A8%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%80-%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%9F%E0%A6%A8-%E0%A6%AE%E0%A7%87%E0%A6%B2%E0%A6%BE"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">ডিসেম্বর ঢাকায় তিন দিনব্যাপী আন্তর্জাতিক পর্যটন মেলা</h5>
+                                    <p class="fz12 mb-3">বাংলাদেশের বৈচিত্রময় পর্যটন ও সেবাগুলো বিশ্ববাজারে তুলে ধরার
+                                       লক্ষ্যে
+                                       আগামী ১ ডিসেম্বর থেকে ঢাকায় তিন দিনব্যাপি আন্তর্জাতিক পর্যটন মেলা অনুষ্ঠিত হবে।
+                                       প্রধানমন্ত্রী শেখ হাসিনা আন্তর্জাতিক পর্যটন মেলার উদ্বোধনী অনুষ্ঠানে প্রধান অতিথি
+                                       হিসেবে
+                                       উপস্থিত থাকবেন...</p>
+                                    <span class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank" href="https://www.protidinersangbad.com/national/339930"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">ভ্রমণ ও পর্যটন খাতকে এগিয়ে নিতে মেলার আয়োজন করছে আটাব</h5>
+                                    <p class="fz12 mb-3">বাংলাদেশের ভ্রমণ ও পর্যটন খাতকে এগিয়ে নিতে এসোসিয়েশন অব ট্রাভেল
+                                       এজেন্টস
+                                       অব বাংলাদেশ (আটাব) ৪৫ বছর যাবৎ নিরলসভাবে কাজ করে যাচ্ছে। এরই ধারাবাহিকতায় আটাব
+                                       বাংলাদেশ
+                                       ইন্টারন্যাশনাল ট্রাভেল এন্ড টুরিজম এক্সপো (বিআইটিটিই) নামক পর্যটন মেলার আয়োজন
+                                       করতে যাচ্ছে...
+                                    </p><span class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank"
+                                 href="http://thecurrentview.com/2022/07/06/atab-to-organise-three-day-long-tourism-expo-in-december/"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">ATAB to organise three-day long tourism expo in December</h5>
+                                    <p class="fz12 mb-3">Bangladesh International Travel and Tourism Expo (BITTE) 2022
+                                       will be
+                                       held on December 1-3 this year at the Bangabandhu International Conference
+                                       Centre. The aim
+                                       of the three-day long expo is to gain the further development of the country’s
+                                       tourism
+                                       sector...</p><span class="link">Read More</span>
+                                 </div>
+                              </a>
+                              <a target="_blank"
+                                 href="https://bangladeshmonitor.com.bd/news-details/The3dayInternationalTravelTourismExpostartsonDecember1"
+                                 rel="noopener noreferrer" class="item">
+                                 <div class="icon"><img src="/assets/images/icons/mic.svg" alt=""></div>
+                                 <div class="info">
+                                    <h5 class="fz16 mb-2">আন্তর্জাতিক ট্রাভেল-ট্যুরিজম এক্সপো শুরু ১ ডিসেম্বর</h5>
+                                    <p class="fz12 mb-3">আগামী ১ ডিসেম্বর শুরু হচ্ছে বাংলাদেশ ইন্টারন্যাশনাল ট্রাভেল
+                                       অ্যান্ড
+                                       ট্যুরিজম এক্সপো (বিআইটিটিই)।
+                                       রাজধানীর বঙ্গবন্ধু আন্তর্জাতিক সম্মেলন কেন্দ্রে এই এক্সপো শেষ হবে ৩ ডিসেম্বর।
+                                       এক্সপোটি আয়োজন
+                                       করছে অ্যাসোসিয়েশন অব ট্রাভেল এজেন্টস অব বাংলাদেশ (আটাব)।
+                                       মঙ্গলবার (৫ জুলাই) মেলা উপলক্ষে রাজধানীর হোটেল ইন্টারকন্টিনেন্টালে সংবাদ
+                                       সম্মেলনের আয়োজন করে
+                                       আটাব। এসময় এক্সপোর বিষয়ে মূল প্রবন্ধ উপস্থাপন করেন আটাবের সভাপতি এস. এন. মঞ্জুর
+                                       মোর্শেদ
+                                       (মাহবুব)...</p><span class="link">Read More</span>
+                                 </div>
+                              </a>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
             </div>
          </div>
       </div>

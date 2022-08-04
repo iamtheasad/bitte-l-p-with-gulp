@@ -1,12 +1,10 @@
-/*--------------------------------------------------------------
-# Site Footer
---------------------------------------------------------------*/
 .footer {
   .footer-content {
     display: flex;
     padding-top: 10.12rem;
+    justify-content: space-between;
 
-    @media screen and(max-width: 990px) {
+    @include mediaQueries(large) {
       padding-bottom: 0rem;
       flex-wrap: wrap;
     }
@@ -17,28 +15,18 @@
 
     .about {
       margin-right: 4rem;
-      max-width: 25%;
-      width: 100%;
 
-      @media screen and(max-width: 990px) {
-        max-width: 48%;
-        margin-bottom: 3rem;
-        margin-right: 3rem;
-      }
-
-      @media screen and(max-width: 768px) {
-        max-width: 100%;
-        margin-right: 0rem;
-      }
-
-      img {
-        width: 10.24rem;
+      .logo {
+        img {
+          max-height: 260px;
+          width: auto;
+        }
       }
 
       p {
         font-size: 1.6rem;
         font-weight: 400;
-        color: var(--color-black);
+        color: var(--ra-color-black);
         padding: 1.5rem 0;
         letter-spacing: 0.3px;
       }
@@ -50,30 +38,20 @@
       .title {
         font-size: 1.8rem;
         font-weight: 600;
-        color: var(--color-gray-1);
+        color: var(--ra-color-gray-1);
         margin-bottom: 1.6rem;
       }
     }
 
+    .quick {
+      display: none;
+    }
+
     .contact-us {
-      margin-right: 4rem;
-      max-width: 25%;
-      width: 100%;
-
-      @media screen and(max-width: 990px) {
-        max-width: 48%;
-        margin-bottom: 3rem;
-        margin-right: 0rem;
-      }
-
-      @media screen and(max-width: 768px) {
-        max-width: 100%;
-      }
-
       .label {
         font-size: 1.8rem;
         font-weight: 400;
-        color: var(--color-gray-2);
+        color: var(--ra-color-gray-2);
         margin-bottom: 8px;
       }
 
@@ -82,55 +60,22 @@
         margin-bottom: 1.6rem;
 
         span {
-          font-size: 2rem;
-          font-weight: 400;
-          color: var(--color-black);
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: var(--ra-color-black);
           line-height: 3rem;
         }
       }
     }
 
-    .quick {
-      margin-right: 4rem;
-      max-width: 25%;
-      width: 100%;
-
-      @media screen and(max-width: 990px) {
-        margin-right: 3rem;
-        max-width: 48%;
-      }
-
-      @media screen and(max-width: 768px) {
-        margin-right: 0rem;
-        max-width: 48%;
-      }
-    }
-
-    .footer-social {
-      margin-right: 4rem;
-      max-width: 25%;
-      width: 100%;
-
-      @media screen and(max-width: 990px) {
-        margin-right: 0rem;
-        max-width: 48%;
-      }
-
-      @media screen and(max-width: 768px) {
-        margin-right: 0rem;
-        max-width: 48%;
-      }
-    }
-
-    .quick,
     .footer-social {
       li {
         list-style: none;
         margin-bottom: 1.6rem;
         a {
           font-size: 1.8rem;
-          font-weight: 400;
-          color: var(--color-gray-1);
+          font-weight: 500;
+          color: var(--ra-color-gray-1);
           line-height: 2rem;
         }
       }
@@ -138,14 +83,14 @@
   }
 
   .all-rights {
-    border-top: 1px solid var(--color-gray-5);
+    border-top: 1px solid var(--ra-color-gray-5);
     padding: 2rem 0rem 4.6rem 0rem;
     font-size: 1.6rem;
     font-weight: 400;
-    color: var(--color-gray-1);
+    color: var(--ra-color-gray-1);
     line-height: 2rem;
 
-    @media screen and(max-width: 990px) {
+    @include mediaQueries(large) {
       text-align: center;
     }
   }
